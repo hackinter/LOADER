@@ -34,7 +34,7 @@ sudo apt-get upgrade -y
 sudo apt-get install python3 git ffmpeg -y
 sudo apt-get install python3-pip -y
 pip install yt-dlp instaloader requests
-git clone https://github.com/hackinter/DOWN-LODER.git
+git clone https://github.com/hackinter/LOADER.git
 cd DOWN-LODER
 pip install -r requirements.txt  
 python3 loader.py
@@ -48,7 +48,7 @@ pkg update -y
 pkg upgrade -y
 pkg install python git -y
 pip install yt-dlp
-git clone https://github.com/hackinter/DOWN-LODER.git
+git clone https://github.com/hackinter/LOADER.git
 cd YT-LODER
 pip install -r requirements.txt  
 python loader.py
@@ -58,6 +58,6 @@ python loader.py
 For a quick installation, you can use this single command for **Linux**:
 
 ```bash
-sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install python3 git -y && pip install yt-dlp && git clone https://github.com/hackinter/DOWN-LODER.git && cd YT-LODER && pip install -r requirements.txt && python3 loader.py
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install python3 git -y && pip install yt-dlp && git clone https://github.com/hackinter/LOADER.git && cd YT-LODER && pip install -r requirements.txt && python3 loader.py
 
 ```
