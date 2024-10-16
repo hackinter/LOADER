@@ -89,9 +89,9 @@ def download_facebook(link):
 if __name__ == "__main__":
     print(ascii_art)  # Print ASCII Art
     print("🌐 Welcome to LOADER!")
-    print(f"⚙️Tool Version: {VERSION}")
+    print(f"⚙️ Tool Version: {VERSION}")
     print(f"👤 Created by: {DEVELOPER}\n")
-    
+    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     print("📱 Choose platform:")
     print("  Y - YouTube")
     print("  I - Instagram")
