@@ -29,15 +29,15 @@ Before you install **YT-LODER**, make sure you have the following installed on y
 Run the following commands in your terminal to install the tool:
 
 ```bash
-sudo apt-get update -y
-sudo apt-get upgrade -y
+sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install python3 git ffmpeg -y
 sudo apt-get install python3-pip -y
 pip install yt-dlp instaloader requests
 git clone https://github.com/hackinter/LOADER.git
-cd DOWN-LODER
-pip install -r requirements.txt  
+cd LOADER
+pip install -r requirements.txt
 python3 loader.py
+
 ```
 
 ### For Termux:
