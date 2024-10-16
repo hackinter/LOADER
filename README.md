@@ -1,6 +1,6 @@
 # YOUTUBE/FACEBOOK/INSTAGRAM/TIKTOK
 ### Tool Name: LOADER  
-### Version: [![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=github)](https://github.com/hackinter/LOADER)  
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=github)](https://github.com/hackinter/LOADER)  
 ### Author: HACKINTER  
 ### Created Date: 2024  
 
