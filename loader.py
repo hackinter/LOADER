@@ -1,5 +1,4 @@
 import os
-import sys
 import requests
 from yt_dlp import YoutubeDL
 import instaloader
@@ -10,11 +9,11 @@ DEVELOPER = "HACKINTER"
 
 # ASCII Art
 ascii_art = """
-  ██████   ██████  ██     ██ ███    ██       ██       ██████   █████  ██████  ███████ ██████  
-  ██   ██ ██    ██ ██     ██ ████   ██       ██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
-  ██   ██ ██    ██ ██  █  ██ ██ ██  ██ █████ ██      ██    ██ ███████ ██   ██ █████   ██████  
-  ██   ██ ██    ██ ██ ███ ██ ██  ██ ██       ██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
-  ██████   ██████   ███ ███  ██   ████       ███████  ██████  ██   ██ ██████  ███████ ██   ██ 
+██       ██████   █████  ██████  ███████ ██████  
+██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
+██      ██    ██ ███████ ██   ██ █████   ██████  
+██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
+███████  ██████  ██   ██ ██████  ███████ ██   ██ 
 """
 
 # File Save Location Picker
@@ -92,17 +91,23 @@ if __name__ == "__main__":
     print(f"📢 App Version: {VERSION}")
     print(f"👨‍💻 Developed by: {DEVELOPER}\n")
     
-    platform = input("📱 Choose platform (YouTube, Instagram, TikTok, Facebook): ").strip().lower()
+    print("📱 Choose platform:")
+    print("  Y - YouTube")
+    print("  I - Instagram")
+    print("  T - TikTok")
+    print("  F - Facebook")
+    
+    platform = input("Select a platform (Y/I/T/F): ").strip().upper()
     link = input("🔗 Enter the link: ")
 
-    if platform == 'youtube':
+    if platform == 'Y':
         format_choice = input("🎥 Video or 🎵 Audio format? (video/v, audio/a): ")
         download_youtube(link, format_choice)
-    elif platform == 'instagram':
+    elif platform == 'I':
         download_instagram(link)
-    elif platform == 'tiktok':
+    elif platform == 'T':
         download_tiktok(link)
-    elif platform == 'facebook':
+    elif platform == 'F':
         download_facebook(link)
     else:
         print("⚠️ Invalid platform selected.")
