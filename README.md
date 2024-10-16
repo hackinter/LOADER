@@ -8,7 +8,7 @@
 <a href="https://github.com/hackinter"><img title="Github" src="https://img.shields.io/badge/hackinter-grey?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center"> 
-<a href="https://x.com/_anonix_z"><img title="Twitter" src="https://img.shields.io/badge/Twitter-HACKINTER-lightgrey?style=for-the-badge&logo=twitter"></a>
+<a href="https://x.com/_anonix_z"><img title="X" src="https://img.shields.io/badge/Twitter-HACKINTER-lightgrey?style=for-the-badge&logo=twitter"></a>
 </p>
 
 ### DESCRIPTION:
