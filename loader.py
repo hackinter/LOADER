@@ -1,4 +1,5 @@
 import os
+import sys
 import requests
 from yt_dlp import YoutubeDL
 import instaloader
@@ -76,9 +77,15 @@ def download_tiktok(link):
 # Download from Facebook
 def download_facebook(link):
     save_location = choose_save_location()
-    # Facebook video download logic can be complex due to authentication.
-    # A public API or web scraper can be used if available.
-    print("Facebook video download is not implemented yet.")
+    video_url = f"https://www.facebook.com/watch/?v={link.split('/')[-1]}"
+    response = requests.get(video_url)
+    
+    if response.status_code == 200:
+        with open(f"{save_location}/facebook_video.mp4", "wb") as f:
+            f.write(response.content)
+        print("✅ Facebook video downloaded successfully!")
+    else:
+        print("❌ Facebook download failed. Check if the video is publicly available.")
 
 if __name__ == "__main__":
     print(ascii_art)  # Print ASCII Art
