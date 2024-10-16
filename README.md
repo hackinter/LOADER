@@ -1,8 +1,9 @@
-# YOUTUBE,FACEBOOK,TIKTOK.INSTAGRAM
-### Tool Name:LOADER
-### Version: 1.0.0
-### Author: HACKINTER
-### Created Date: 2024
+# YOUTUBE, FACEBOOK, TIKTOK, INSTAGRAM
+
+### Tool Name: LOADER  
+### Version: 1.0.0  
+### Author: HACKINTER  
+### Created Date: 2024  
 
 <p align="center">
 <a href="https://github.com/hackinter"><img title="Github" src="https://img.shields.io/badge/hackinter-grey?style=for-the-badge&logo=github"></a>
@@ -14,7 +15,7 @@
 </p>
 
 ### DESCRIPTION:
-**YT-LODER** is a Python-based tool that allows users to download videos or audio from YouTube directly through the terminal. It is user-friendly and provides a fast downloading process.
+**YT-LODER** is a Python-based tool that allows users to download videos or audio from YouTube, Facebook, TikTok, and Instagram directly through the terminal. It is user-friendly and provides a fast downloading process.
 
 ## REQUIREMENTS:
 Before you install **YT-LODER**, make sure you have the following installed on your system:
@@ -37,7 +38,6 @@ git clone https://github.com/hackinter/LOADER.git
 cd LOADER
 pip install -r requirements.txt
 python3 loader.py
-
 ```
 
 ### For Termux:
