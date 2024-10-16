@@ -1,0 +1,16 @@
+# requirements.txt
+
+# For downloading videos from YouTube
+pytube==12.1.0  # A lightweight, easy-to-use library for downloading YouTube videos
+
+# If you want to handle audio conversion
+pydub==0.25.1  # A simple and easy-to-use library for manipulating audio
+
+# For logging
+loguru==0.5.3  # A library for logging with a better API than the built-in logging
+
+# For handling any other requests
+requests==2.28.1  # For making HTTP requests to fetch video data or metadata
+
+# Optional: If you're using a specific API or web scraping
+beautifulsoup4==4.11.1  # For parsing HTML and XML documents (if needed)

@@ -1,0 +1,101 @@
+import os
+import requests
+from yt_dlp import YoutubeDL
+import instaloader
+
+# App Version and Developer Credit
+VERSION = "1.0.0"
+DEVELOPER = "HACKINTER"
+
+# ASCII Art
+ascii_art = """
+  ██████   ██████  ██     ██ ███    ██       ██       ██████   █████  ██████  ███████ ██████  
+  ██   ██ ██    ██ ██     ██ ████   ██       ██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
+  ██   ██ ██    ██ ██  █  ██ ██ ██  ██ █████ ██      ██    ██ ███████ ██   ██ █████   ██████  
+  ██   ██ ██    ██ ██ ███ ██ ██  ██ ██       ██      ██    ██ ██   ██ ██   ██ ██      ██   ██ 
+  ██████   ██████   ███ ███  ██   ████       ███████  ██████  ██   ██ ██████  ███████ ██   ██ 
+"""
+
+# File Save Location Picker
+def choose_save_location():
+    folder_path = input("📂 Enter the folder path to save (Press Enter to use current directory): ").strip()
+    if not folder_path or not os.path.isdir(folder_path):
+        print("⚠️ Invalid path. Using current directory.")
+        folder_path = os.getcwd()
+    return folder_path
+
+# Download from YouTube
+def download_youtube(link, format_choice):
+    save_location = choose_save_location()
+    ydl_opts = {
+        'outtmpl': f'{save_location}/%(title)s.%(ext)s',
+    }
+
+    if format_choice.lower() in ['video', 'v']:
+        ydl_opts['format'] = 'best'
+    elif format_choice.lower() in ['audio', 'a']:
+        ydl_opts.update({
+            'format': 'bestaudio/best',
+            'postprocessors': [{
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': 'mp3',
+                'preferredquality': '192',
+            }],
+        })
+    else:
+        print("⚠️ Invalid option! Please select 'video' or 'audio'.")
+        return
+
+    with YoutubeDL(ydl_opts) as ydl:
+        ydl.download([link])
+
+# Download from Instagram
+def download_instagram(link):
+    save_location = choose_save_location()
+    L = instaloader.Instaloader()
+    
+    try:
+        post = instaloader.Post.from_shortcode(L.context, link.split("/")[-2])
+        L.download_post(post, target=save_location)
+    except Exception as e:
+        print(f"❌ Instagram download failed: {e}")
+
+# Download from TikTok
+def download_tiktok(link):
+    save_location = choose_save_location()
+    response = requests.get(f"https://api.tikmate.app/v1/video?url={link}").json()
+    video_url = response.get('video_url')
+    if video_url:
+        video_response = requests.get(video_url)
+        with open(f"{save_location}/tiktok_video.mp4", "wb") as f:
+            f.write(video_response.content)
+        print("✅ TikTok video downloaded successfully!")
+    else:
+        print("❌ TikTok download failed.")
+
+# Download from Facebook
+def download_facebook(link):
+    save_location = choose_save_location()
+    # Facebook video download logic can be complex due to authentication.
+    # A public API or web scraper can be used if available.
+    print("Facebook video download is not implemented yet.")
+
+if __name__ == "__main__":
+    print(ascii_art)  # Print ASCII Art
+    print(f"📢 App Version: {VERSION}")
+    print(f"👨‍💻 Developed by: {DEVELOPER}\n")
+    
+    platform = input("📱 Choose platform (YouTube, Instagram, TikTok, Facebook): ").strip().lower()
+    link = input("🔗 Enter the link: ")
+
+    if platform == 'youtube':
+        format_choice = input("🎥 Video or 🎵 Audio format? (video/v, audio/a): ")
+        download_youtube(link, format_choice)
+    elif platform == 'instagram':
+        download_instagram(link)
+    elif platform == 'tiktok':
+        download_tiktok(link)
+    elif platform == 'facebook':
+        download_facebook(link)
+    else:
+        print("⚠️ Invalid platform selected.")
