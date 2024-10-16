@@ -88,8 +88,9 @@ def download_facebook(link):
 
 if __name__ == "__main__":
     print(ascii_art)  # Print ASCII Art
-    print(f"📢 App Version: {VERSION}")
-    print(f"👨‍💻 Developed by: {DEVELOPER}\n")
+    print("🌐 Welcome to LOADER!")
+    print(f"⚙️Tool Version: {VERSION}")
+    print(f"👤 Created by: {DEVELOPER}\n")
     
     print("📱 Choose platform:")
     print("  Y - YouTube")
@@ -111,3 +112,5 @@ if __name__ == "__main__":
         download_facebook(link)
     else:
         print("⚠️ Invalid platform selected.")
+
+print("© 2024 HACKINTER. All rights reserved.")
