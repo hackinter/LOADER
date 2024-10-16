@@ -27,7 +27,6 @@ Before you install **YT-LODER**, make sure you have the following installed on y
 Run the following commands in your terminal to install the tool:
 
 ```bash
-sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install python3 git ffmpeg -y
 sudo apt-get install python3-pip -y
 pip install yt-dlp instaloader requests
