@@ -58,4 +58,4 @@ For a quick installation, you can use this single command for **Linux**:
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install python3 git -y && sudo apt-get install python3-pip -y && pip install yt-dlp requests && git clone https://github.com/hackinter/YT-LOADER.git && cd LOADER && pip install -r requirements.txt && python3 loader.py
 ```
 
-# © 2024 HACKINTER. All rights reserved.
+### © 2024 HACKINTER. All rights reserved.
