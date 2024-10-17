@@ -1,5 +1,6 @@
-# YOUTUBE/FACEBOOK/INSTAGRAM/TIKTOK
-### Tool Name: LOADER  
+
+# JUST FOR YOUTUBE
+### Tool Name: YT-LOADER  
 [![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=github)](https://github.com/hackinter/LOADER)  
 ### Author: HACKINTER  
 ### Created Date: 2024  
@@ -12,10 +13,10 @@
 </p>
 
 ### DESCRIPTION:
-**YT-LODER** is a Python-based tool that allows users to download videos or audio from YouTube, Facebook, TikTok, and Instagram directly through the terminal. It is user-friendly and provides a fast downloading process.
+**YT-LOADER** is a Python-based tool that allows users to download videos or audio from YouTube, Facebook, TikTok, and Instagram directly through the terminal. It is user-friendly and provides a fast downloading process.
 
 ## REQUIREMENTS:
-Before you install **YT-LODER**, make sure you have the following installed on your system:
+Before you install **YT-LOADER**, make sure you have the following installed on your system:
 
 - **Python 3**: Make sure Python 3.x is installed. You can check by running `python3 --version` in the terminal.
 - **Git**: To clone the repository. Check if it's installed by running `git --version`.
@@ -27,10 +28,10 @@ Before you install **YT-LODER**, make sure you have the following installed on y
 Run the following commands in your terminal to install the tool:
 
 ```bash
-sudo apt-get install python3 git ffmpeg -y
+sudo apt-get install python3 git -y
 sudo apt-get install python3-pip -y
-pip install yt-dlp instaloader requests
-git clone https://github.com/hackinter/LOADER.git
+pip install yt-dlp requests
+git clone https://github.com/hackinter/YT-LOADER.git
 cd LOADER
 pip install -r requirements.txt
 python3 loader.py
@@ -43,8 +44,8 @@ If you're using Termux, use the following commands to install the tool:
 pkg update -y
 pkg upgrade -y
 pkg install python git -y
-pip install yt-dlp instaloader requests
-git clone https://github.com/hackinter/LOADER.git
+pip install yt-dlp requests
+git clone https://github.com/hackinter/YT-LOADER.git
 cd LOADER
 pip install -r requirements.txt
 python loader.py
@@ -54,5 +55,7 @@ python loader.py
 For a quick installation, you can use this single command for **Linux**:
 
 ```bash
-sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install python3 git ffmpeg -y && sudo apt-get install python3-pip -y && pip install yt-dlp instaloader requests && git clone https://github.com/hackinter/LOADER.git && cd LOADER && pip install -r requirements.txt && python3 loader.py
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install python3 git -y && sudo apt-get install python3-pip -y && pip install yt-dlp requests && git clone https://github.com/hackinter/YT-LOADER.git && cd LOADER && pip install -r requirements.txt && python3 loader.py
 ```
+
+# © 2024 HACKINTER. All rights reserved.
