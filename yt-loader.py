@@ -23,8 +23,8 @@ def choose_save_location():
         folder_path = os.getcwd()
     return folder_path
 
-# Download from YouTube
-def download_youtube(link, resolution):
+# Download YouTube video or audio
+def download_youtube(link, format_choice, resolution):
     save_location = choose_save_location()
     ydl_opts = {
         'outtmpl': f'{save_location}/%(title)s.%(ext)s',
@@ -48,18 +48,20 @@ if __name__ == "__main__":
 
     link = input("🔗 Enter the YouTube link: ")
 
-    format_choice = input("🎥 Video or 🎵 Audio format? (video/v, audio/a): ")
-    if format_choice.lower() in ['video', 'v']:
-        format_choice = 'bestvideo'  # Change to best video format
-    elif format_choice.lower() in ['audio', 'a']:
-        format_choice = 'bestaudio'  # Change to best audio format
+    # Format selection: Video or Audio
+    format_choice = input("🎥 Video or 🎵 Audio format? (video/v, audio/a): ").strip().lower()
+    if format_choice in ['video', 'v']:
+        format_choice = 'bestvideo'
+    elif format_choice in ['audio', 'a']:
+        format_choice = 'bestaudio'
     else:
         print("⚠️ Invalid format selected.")
         exit(1)
 
-    resolution = input("🔍 Choose resolution (480p, 720p, 1080p, 1440p): ")
+    # Resolution selection
+    resolution = input("🔍 Choose resolution (480p, 720p, 1080p, 1440p): ").strip()
 
-    # Map resolutions to yt-dlp format
+    # Mapping resolution input to yt-dlp format
     resolution_map = {
         "480p": "best[height<=480]",
         "720p": "best[height<=720]",
@@ -68,7 +70,7 @@ if __name__ == "__main__":
     }
 
     if resolution in resolution_map:
-        download_youtube(link, resolution_map[resolution])
+        download_youtube(link, format_choice, resolution_map[resolution])
     else:
         print("⚠️ Invalid resolution selected.")
 
